@@ -20,8 +20,6 @@
 # ***************************************
 # https://leetcode.cn/problems/length-of-longest-fibonacci-subsequence/
 
-from re import S
-
 
 class Solution:
     def lenLongestFibSubseq(arr):
