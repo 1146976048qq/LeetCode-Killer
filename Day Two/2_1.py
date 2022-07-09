@@ -18,10 +18,15 @@
 # 输出: 3
 # 解释: 所有可能的子串都是最长的，只有 "pwke" 是唯一的。
 # ***************************************
+# 解题思路：
+# 1. 双指针，一个指针指向开头，一个指针指向末尾
+# 2. 如果当前字符串不包含重复字符，则记录当前字符串长度
+# 3. 如果当前字符串包含重复字符，则记录当前字符串长度，并将指针后移
+# ***************************************
 # https://leetcode.cn/problems/longest-substring-without-repeating-characters/
 
 class Solution():
-    def lengthOfLongestSubstring(self, s):
+    def MaxSubString(s):
         if not s:
             return 0
         max_len = 0
@@ -36,9 +41,9 @@ class Solution():
             end += 1
         return max_len
 
-print(Solution.lengthOfLongestSubstring("abcabcbb"))
-print(Solution.lengthOfLongestSubstring("bbbbb"))
-print(Solution.lengthOfLongestSubstring("pwwkew"))
+print(Solution.MaxSubString("abcabcbb"))
+print(Solution.MaxSubString("bbbbb"))
+print(Solution.MaxSubString("pwwkew"))
 print("***************************************")
 
 

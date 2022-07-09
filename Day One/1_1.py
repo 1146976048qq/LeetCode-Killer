@@ -18,6 +18,18 @@
 # 输出: 3
 # 解释: 最长的斐波那契式子序列有 [1,11,12]、[3,11,14] 以及 [7,11,18] 。
 # ***************************************
+# 解题思路：
+# 1. 暴力解法：
+#   a. 初始化：
+#     1. 初始化一个数组，用来存储每个数字的斐波那契式子序列的长度，初始化为0，即当前数字自身。
+#   b. 循环：
+#     1. 循环遍历数组，每次循环，都会计算当前数字的斐波那契式子序列的长度。
+#     2. 如果当前数字的斐波那契式子序列的长度大于最大值，则更新最大值。
+#   c. 返回最大值。
+# 2. 动态规划：
+#   a. 初始化：
+#     1. 初始化一个数组，用来存储每个数字的斐波那契式子序列的长度，初始化为0，即当前数字自身。
+
 # https://leetcode.cn/problems/length-of-longest-fibonacci-subsequence/
 
 
@@ -36,5 +48,21 @@ class Solution:
                     ans = max(ans, dp[j][i])
         return ans
 
+    def lenLongestFibSubseq2(A):
+        dp = {}
+        for i, x in enumerate(A):
+            dp[x] = i
+        ans = 0
+        for i, x in enumerate(A):
+            for j in range(i + 1, len(A)):
+                y = x + A[j]
+                if y in dp:
+                    ans = max(ans, dp[y] - i + 1)
+        return ans
+
 print(Solution.lenLongestFibSubseq([1,2,3,4,5,6,7,8]))
 print(Solution.lenLongestFibSubseq([1,3,7,11,12,14,18]))
+print("***************************************")
+print(Solution.lenLongestFibSubseq2([1,2,3,4,5,6,7,8]))
+print(Solution.lenLongestFibSubseq2([1,3,7,11,12,14,18]))
+
