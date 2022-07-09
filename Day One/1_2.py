@@ -20,9 +20,6 @@
 # ***************************************
 # https://leetcode.cn/problems/two-sum/
 
-from calendar import c
-from re import A
-
 
 class Solution():
     def TwoSum(arr, target):

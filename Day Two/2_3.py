@@ -9,16 +9,9 @@
 # 输入: [1,8,6,2,5,4,8,3,7]
 # 输出: 49
 # ***************************************
-# 解题思路：
-# 1. 暴力解法：遍历每个点，计算容器的面积，找出最大的面积
+# https://leetcode.cn/problems/container-with-most-water/
 
-# 2. 动态规划：
-#   a. 初始化：
-#     dp[i][j] 表示以点 i 和点 j 为右下角的容器的最大面积
-#     dp[i][i] = 0
-#   b. 状态转移：
-#     dp[i][j] = max(dp[i][j], dp[i][k] + dp[k][j] + (j - i) * (j - k))
-# ***************************************
+
 class Solution():
     def MaxArea(height):
         if not height:
