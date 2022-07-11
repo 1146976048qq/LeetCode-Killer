@@ -36,7 +36,7 @@
 
 
 class Solution():
-    def myAtoi(str):
+    def myAtoi(self, str):
         if not str:
             return 0
         str = str.strip()
@@ -63,11 +63,11 @@ class Solution():
             return -2147483648
         return res
 
-print(Solution().myAtoi('42'))
-# print(Solution().myAtoi('-42'))
-# print(Solution().myAtoi('4193 with words'))
-# print(Solution().myAtoi('words and 987'))
-# print(Solution().myAtoi('-91283472332'))
+print(Solution().myAtoi(Solution, '42'))
+print(Solution().myAtoi(Solution, '-42'))
+print(Solution().myAtoi(Solution, '4193 with words'))
+print(Solution().myAtoi(Solution, 'words and 987'))
+print(Solution().myAtoi(Solution, '-91283472332'))
 
 
 
