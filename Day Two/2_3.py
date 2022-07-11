@@ -36,7 +36,6 @@ class Solution():
                 right -= 1
         return max_area
 
-
 print(Solution.MaxArea([1,8,6,2,5,4,8,3,7]))
 print("***************************************")
 print(Solution.MaxArea2([1,8,6,2,5,4,8,3,7]))
