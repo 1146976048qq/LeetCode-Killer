@@ -63,12 +63,11 @@ class Solution():
             return -2147483648
         return res
 
-
 print(Solution().myAtoi('42'))
-print(Solution().myAtoi('   -42'))
-print(Solution().myAtoi('4193 with words'))
-print(Solution().myAtoi('words and 987'))
-print(Solution().myAtoi('-91283472332'))
+# print(Solution().myAtoi('-42'))
+# print(Solution().myAtoi('4193 with words'))
+# print(Solution().myAtoi('words and 987'))
+# print(Solution().myAtoi('-91283472332'))
 
 
 

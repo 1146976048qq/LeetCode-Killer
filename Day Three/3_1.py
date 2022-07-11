@@ -18,21 +18,28 @@
 # ***************************************
 # https://leetcode.cn/problems/permutations/
 
-class Solution():
+
+class Solution:
     def permute(self, nums):
-        if not nums:
-            return []
-        if len(nums) == 1:
-            return [nums]
-        result = []
-        for i in range(len(nums)):
-            tmp = nums[i]
-            nums.pop(i)
-            for j in self.permute(nums):
-                result.append([tmp] + j)
-            nums.insert(i, tmp)
-        return result
-
-
-print(Solution.permute([1,2,3]))
-print(Solution.permute([1,2,3,4]))
+        """
+        :type nums: List[int]
+        :rtype: List[List[int]]
+        """
+        def backtrack(first = 0):
+            # 所有数都填完了
+            if first == n:  
+                res.append(nums[:])
+            for i in range(first, n):
+                # 动态维护数组
+                nums[first], nums[i] = nums[i], nums[first]
+                # 继续递归填下一个数
+                backtrack(first + 1)
+                # 撤销操作
+                nums[first], nums[i] = nums[i], nums[first]
+        n = len(nums)
+        res = []
+        backtrack()
+        return res
+    
+print(Solution.permute(Solution, [1,2,3]))
+print(Solution.permute(Solution, [1,2,3,4]))
