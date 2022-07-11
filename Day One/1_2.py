@@ -37,13 +37,14 @@ print(Solution.TwoSum([3,3], 6))
 print("***************************************")
 
 class Solution2():
-    def TwoSum(arr, target):
+    def TwoSum2(arr, target):
         hashtabel = dict()
         for i, num in enumerate(arr):
             if target - num in hashtabel:
                 return [hashtabel[target - num], i]
             hashtabel[num] = i
         return []
-print(Solution2.TwoSum([2,7,11,15], 9))
-print(Solution2.TwoSum([3,2,4], 6))
-print(Solution2.TwoSum([3,3], 6))
+
+print(Solution2.TwoSum2([2,7,11,15], 9))
+print(Solution2.TwoSum2([3,2,4], 6))
+print(Solution2.TwoSum2([3,3], 6))
