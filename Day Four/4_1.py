@@ -37,7 +37,6 @@ l2 = ListNode(1)
 l2.next = ListNode(3)
 l2.next.next = ListNode(4)
 
-
 print(Solution().mergeTwoLists(l1, l2))
 
 
