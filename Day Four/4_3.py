@@ -24,18 +24,16 @@ class Solution:
         :type val: int
         :rtype: int
         """
-        if not nums:
-            return 0
-        i = 0
-        for j in range(0, len(nums)):
-            if nums[j] != val:
-                i += 1
-                nums[i] = nums[j]
-            else:
-                j += 1
-        return i + 1
+        a = 0
+        b = 0
+        while a < len(nums):
+            if nums[a] != val:
+                nums[b] = nums[a]
+                b += 1
+            a += 1
 
+        return b
 
 print(Solution.removeElement(Solution, [3, 2, 2, 3], 3))
-# print(Solution.removeElement(Solution, [0, 1, 2, 2, 3, 0, 4, 2], 2))
+print(Solution.removeElement(Solution, [0, 1, 2, 2, 3, 0, 4, 2], 2))
 print("***************************************")
