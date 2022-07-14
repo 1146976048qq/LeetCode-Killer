@@ -27,13 +27,15 @@ class Solution:
         if not nums:
             return 0
         i = 0
-        for j in range(len(nums)):
+        for j in range(0, len(nums)):
             if nums[j] != val:
                 i += 1
                 nums[i] = nums[j]
+            else:
+                j += 1
         return i + 1
 
 
 print(Solution.removeElement(Solution, [3, 2, 2, 3], 3))
-print(Solution.removeElement(Solution, [0, 1, 2, 2, 3, 0, 4, 2], 2))
+# print(Solution.removeElement(Solution, [0, 1, 2, 2, 3, 0, 4, 2], 2))
 print("***************************************")
