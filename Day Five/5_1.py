@@ -20,3 +20,4 @@ class Solution():
         return [[a,b] for a in A for b in B]
 
 
+print(Solution.cartesianProduct(Solution, [1,2,3], [4,5,6]))
