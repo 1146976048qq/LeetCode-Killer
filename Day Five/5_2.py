@@ -6,13 +6,19 @@
 # https://leetcode.cn/problems/cartesian-product-of-two-arrays/
 #
 #
-class Solution():
-    def cartesianProduct(self, A, B):
-        res = []
-        for a in A:
-            for b in B:
-                res.append([a,b])
-        return res
+def Solution(arrays):
+    res = []
+    def multiCar(arr, i, r):
+        # i index
+        # r result
 
+        if i == len(arr):
+            res.append(r) 
+        else:
+            for j in range(len(arr[i])):
+                multiCar(arr, i + 1, r + str([arr[i][j]]))   # 将当前元素加入结果中
+    
+    multiCar([[1,2,3],[5,6],[7,8]], 0, '') # 开始递归
+    return res
 
-print(Solution.cartesianProduct(Solution, [[1,2,3],[5,6],[7,8]]))
+print(Solution([[1,2,3],[5,6],[7,8]]))
