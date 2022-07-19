@@ -21,7 +21,7 @@ class Solution:
         for i in range(len(num1)):
             for j in range(len(num2)):
                 ans[i + j] += int(num1[i]) * int(num2[j])
-        for i in range(len(ans)):
+        for i in range(0, len(ans)):
             ans[i + 1] += ans[i] // 10
             ans[i] %= 10
         while ans[-1] == 0:
