@@ -32,3 +32,4 @@ class Solution:
 print(Solution().multiply('2', '3'))
 print(Solution().multiply('123', '456'))
 print("***************************************")
+
