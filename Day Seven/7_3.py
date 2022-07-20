@@ -16,3 +16,14 @@
 # 输出: 1
 # ***************************************
 # https://leetcode.cn/problems/kth-largest-element-in-an-array/
+#
+
+class Solution:
+    def findKthLargest(self, nums: List[int], k: int) -> int:
+        return sorted(nums)[-k]
+
+
+print(Solution().findKthLargest([3,2,1,5,6,4], 2))
+print(Solution().findKthLargest([3,2,3,1,2,4,5,5,6], 4))
+print(Solution().findKthLargest([1], 1))
+print("***************************************")
