@@ -19,7 +19,7 @@
 #
 
 class Solution:
-    def findKthLargest(self, nums: List[int], k: int) -> int:
+    def findKthLargest(self, nums, k):
         return sorted(nums)[-k]
 
 
