@@ -24,4 +24,7 @@ class Solution():
 
 # 示例1
 nums1 = [10,9,2,5,3,7,101,18]
+
 print(Solution().lengthOfLIS(nums1))
+print("***************************************")
+
