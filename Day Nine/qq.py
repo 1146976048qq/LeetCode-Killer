@@ -85,16 +85,31 @@ if __name__ == '__main__':
     qq = qq(m, n, t, h)
     print(qq.qq())
 
-    # 输入
-    # 4 4 10
-    # 10 20 30 40
-    # 100 120 140 160
-    # 200 220 240 260
-    # 300 320 340 360
-    # 输出
-    # 2
+
+class qq:
+    def __init__(self, m, n, t, h):
+        self.m = m  # 长方形区域的长
+        self.n = n  # 长方形区域的宽
+        self.t = t  # 高度差
+        self.h = h  # 长方形区域的每个点的高度
+
+    def qq(self):   # 判断是否可以直接通过
+        # if self.m < 5 or self.n < 5:    # 如果长或宽小于4，则无法直接通过
+        #     return -1   # 返回-1
+        for i in range(self.m):  # 循环遍历长方形区域的每个点
+            for j in range(self.n): # 循环遍历长方形区域的每个点
+                if self.h[i][j] > self.h[i][j + 1] + self.t or self.h[i][j] > self.h[i + 1][j] + self.t: # 如果当前点的高度大于下一个点的高度加上高度差，则无法直接通过
+                    return -1   # 返回-1
+        return self.m * self.n - 1  # 如果所有点都可以直接通过，则返回长方形区域的面积减去1
 
 
+if __name__ == '__main__':
+    m, n, t = map(int, input().split())
+    h = []
+    for i in range(m):
+        h.append(list(map(int, input().split())))
+    qq = qq(m, n, t, h)
+    print(qq.qq())
 
 
 
